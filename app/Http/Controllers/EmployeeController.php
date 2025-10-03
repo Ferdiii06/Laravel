@@ -9,9 +9,8 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        $employees = Employee::latest()->paginate(5);
-
-        return view('.employees.index', compact('employees'));
+       $employees = Employee::latest()->paginate(5);
+        return view('employees.index', compact('employees'));
     }
 
     public function create()
@@ -77,4 +76,6 @@ class EmployeeController extends Controller
         $employee->delete();
         return redirect()->route('employees.index');
     }
+
+
 }
