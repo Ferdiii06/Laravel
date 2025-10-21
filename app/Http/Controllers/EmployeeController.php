@@ -5,16 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 
+
 class EmployeeController extends Controller
 {
     public function index()
     {
-       $employees = Employee::latest()->paginate(5);
+        $employees = Employee::with(['department', 'position'])->latest()->paginate(10);
         return view('employees.index', compact('employees'));
     }
 
     public function create()
     {
+
+
         return view('employees.create');
     }
 
@@ -35,7 +38,7 @@ class EmployeeController extends Controller
 
     public function show(string $id)
     {
-        $employee = Employee::find($id);
+        $employee = Employee::findOrFail($id);
         return view('employees.show', compact('employee'));
     }
 
@@ -76,6 +79,4 @@ class EmployeeController extends Controller
         $employee->delete();
         return redirect()->route('employees.index');
     }
-
-
 }
