@@ -21,4 +21,6 @@ class Attendance extends Model
         'waktu_keluar',
         'status_absensi',
     ];
+
+    
 }

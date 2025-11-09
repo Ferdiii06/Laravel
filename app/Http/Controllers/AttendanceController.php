@@ -43,13 +43,13 @@ class AttendanceController extends Controller
     public function edit($id)
     {
         $attendance = Attendance::findOrFail($id);
-        return view('attendances.edit', compact('attendances'));
+        return view('attendances.edit', compact('attendance'));
     }
 
     public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
-            'nama_karyawan' => 'required|string|max:255',
+            'karyawan_id' => 'required|string|max:255',
             'tanggal' => 'required|date',
             'waktu_masuk' => 'required|date_format:H:i',
             'waktu_keluar' => 'nullable|date_format:H:i',
@@ -64,14 +64,19 @@ class AttendanceController extends Controller
 
     public function destroy($id)
     {
-        Attendance::findOrFail($id)->delete();
-        return redirect()->route('attendances.index')->with('success', 'Data absensi berhasil dihapus.');
+        try {
+            $attendance = Attendance::findOrFail($id);
+            $attendance->delete();
+            return redirect()->route('attendances.index')->with('success', 'Data absensi berhasil dihapus.');
+        } catch (\Exception $e) {
+            return redirect()->route('attendances.index')->with('error', 'Gagal menghapus data absensi.');
+        }
     }
 
     public function show($id)
     {
         $attendance = Attendance::findOrFail($id);
-        return view('attendances.show', compact('attendances'));
+        return view('attendances.show', compact('attendance'));
     }
 
 

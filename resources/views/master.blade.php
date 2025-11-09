@@ -40,7 +40,9 @@
         @yield('content')
     </main>
     <footer>
-        <p>&copy; {{ date('Y') }} Department</p>
+        <div class="bg-gray-800 text-white text-center py-4 mt-10">
+            &copy; {{ date('Y') }} App Pegawai. All rights reserved.
+        </div>
     </footer>
 </body>
 
