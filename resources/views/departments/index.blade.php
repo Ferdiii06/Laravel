@@ -11,7 +11,7 @@
 <div class="container mx-auto mt-10 p-6 bg-white shadow-xl rounded-lg max-w-7xl">
     <div class="flex justify-between items-center mb-6 border-b pb-3">
         <h1 class="text-3xl font-bold text-gray-800">Daftar Department</h1>
-        <a href="{{ route('departments.create') }}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out shadow-md">
+        <a href="{{ route('departments.create') }}" class="inline-block  bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out shadow-md">
             Tambah Department
         </a>
     </div>

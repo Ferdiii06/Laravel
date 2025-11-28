@@ -36,6 +36,14 @@
                 <td class="px-4 py-3 text-sm text-gray-900">{{ $employee->tanggal_masuk }}</td>
             </tr>
             <tr class="hover:bg-gray-50">
+                <th class="px-4 py-3 text-left text-sm font-medium text-gray-500">Departemen</th>
+                <td class="px-4 py-3 text-sm text-gray-900">{{ $employee->department?->nama ?? '-' }}</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
+                <th class="px-4 py-3 text-left text-sm font-medium text-gray-500">Jabatan</th>
+                <td class="px-4 py-3 text-sm text-gray-900">{{ $employee->position?->nama ?? '-' }}</td>
+            </tr>
+            <tr class="hover:bg-gray-50">
                 <th class="px-4 py-3 text-left text-sm font-medium text-gray-500">Status</th>
                 <td class="px-4 py-3 text-sm text-gray-900">
                     <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full {{ $employee->status == 'aktif' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800' }}">

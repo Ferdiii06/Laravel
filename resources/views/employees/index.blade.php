@@ -12,7 +12,7 @@
         <h1 class="text-3xl font-bold mb-6 text-gray-800">Daftar Pegawai</h1>
 
         <div class="mb-4 text-right">
-            <a href="{{ route('employees.create') }}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out">
+            <a href="{{ route('employees.create') }}" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out">
                 Tambah Pegawai
             </a>
         </div>

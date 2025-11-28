@@ -9,7 +9,7 @@
         <h1 class="text-3xl font-bold mb-6 text-gray-800 border-b pb-3">Daftar Absensi Karyawan</h1>
 
         <div class="mb-6">
-            <a href="{{ route('attendances.create') }}" class="inline-block bg-blue-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out shadow-md">
+            <a href="{{ route('attendances.create') }}" class="inline-block  bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-150 ease-in-out shadow-md">
                 + Tambah Absensi
             </a>
         </div>

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Department;
 use Illuminate\Http\Request;
+use Illuminate\Database\Seeder;
 
 class DepartmentController extends Controller
 {
@@ -61,3 +63,4 @@ class DepartmentController extends Controller
         return redirect()->route('departments.index');
     }
 }
+
